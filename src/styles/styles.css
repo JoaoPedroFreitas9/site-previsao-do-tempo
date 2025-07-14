@@ -1,0 +1,195 @@
+/* Importa a fonte Poppins do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Reset e configurações globais */
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* Fundo cinza-azulado bem claro, como na imagem */
+  background-color: #f0f4f8;
+}
+
+/* Container geral (o card branco) */
+#container {
+  width: 100%;
+  max-width: 380px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 28px;
+}
+
+/* Formulário de busca */
+#search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f0f4f8;
+  border: 1px solid #e5e9ec;
+  border-radius: 15px;
+  padding: 12px 15px;
+}
+
+#search i.fa-location-dot {
+  color: #555;
+  font-size: 16px;
+}
+
+#search input {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  width: 100%;
+  color: #334155;
+  font-weight: 500;
+}
+
+#search input::placeholder {
+  color: #64748b;
+  font-weight: 400;
+}
+
+#search input:focus {
+  outline: none;
+}
+
+#search button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#search button i {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Div principal do clima */
+#weather {
+  display: none; /* Inicia oculto e aparece com JS */
+  text-align: center;
+  margin-top: 25px;
+}
+
+#weather.show {
+  display: block;
+}
+
+/* Título com a cidade */
+#title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+/* Bloco de temperatura (o azul do meio) */
+#temp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: #4a69e2;
+  color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+/* Estilizando a imagem que vem da API */
+#temp_img {
+  width: 70px;
+  height: 70px;
+}
+
+#temp_text {
+  text-align: left;
+}
+
+#temp_value {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+#temp_description {
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Seção de outras informações */
+#other_infos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #f0f4f8;
+  border-radius: 15px;
+}
+
+.info i {
+  font-size: 24px;
+}
+
+/* Estiliza a div que contém o h2 e o p */
+.info div h2 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.info div p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Estilo para "C°" que agora está na tag <sup> */
+.info sup {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+/* Cores dos ícones, agora funcionando com os IDs */
+#temp_max_icon {
+  color: #cb5656;
+}
+#temp_min_icon {
+  color: #69a5e4;
+}
+#humidity_icon {
+  color: #38bdf8;
+}
+#wind_icon {
+  color: #826ae3;
+}
+
+/* Alerta de cidade não encontrada */
+#alert {
+  display: none;
+  text-align: center;
+  padding: 15px;
+  background-color: #fef2f2;
+  border-radius: 12px;
+  color: #b91c1c;
+  margin-top: 20px;
+  font-weight: 500;
+}
